@@ -16,7 +16,7 @@ for i in range(num_rows):
     row = {
         # 'id': str(i).zfill(12),  # Incremental unique 12-digit ID
         'name': fake.name(),
-        'address': fake.address().replace(',', ' '),
+        'address': fake.address().replace(',', ' ').replace('\n', ' '),  # Remove commas and newlines
         'email': fake.email(),
         'phone_number': fake.phone_number(),
         'job': fake.job(),
@@ -31,7 +31,7 @@ for i in range(num_rows):
 df = pd.DataFrame(data)
 # print(df)
 # Write DataFrame to CSV
-df.to_csv('fake_data.csv', index=True, quoting=csv.QUOTE_NONNUMERIC)
+df.to_csv('fake_data.csv', index=False, quoting=csv.QUOTE_NONNUMERIC)
 
 print("CSV file generated successfully.")
 

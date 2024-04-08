@@ -12,7 +12,8 @@ services:
       - "3306:3306"
     volumes:
       - mysql_data:/var/lib/mysql
-      - ./mysql_data_directory:/mysql_data_directory
+      - ./mysql_data_directory:/var/lib/mysql-files/
+      - ./mysql/conf.d:/etc/mysql/conf.d # Mount MySQL config directory
     networks:
       backend:
         ipv4_address: 172.28.0.2
@@ -26,6 +27,7 @@ services:
       - "9000:9000"
     volumes:
       - clickhouse_data:/var/lib/clickhouse
+      - clickhouse_conf:/etc/clickhouse-server # Mount ClickHouse config directory
     networks:
       backend:
         ipv4_address: 172.28.0.3
@@ -40,3 +42,5 @@ networks:
 volumes:
   mysql_data:
   clickhouse_data:
+  mysql_conf: # MySQL config volume
+  clickhouse_conf: # ClickHouse config volume

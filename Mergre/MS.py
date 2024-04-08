@@ -15,10 +15,9 @@ mydb = mysql.connector.connect(
 cursor = mydb.cursor()
 
 
-
 # Query execution with time measurement
 start_time = time.time()
-query =f"SELECT * FROM {TABLE_} ORDER BY name LIMIT 100;"
+query =f"SELECT count(DISTINCT name) FROM {DATABASE_}.{TABLE_} ;"
 cursor.execute(query)
 end_time = time.time()
 

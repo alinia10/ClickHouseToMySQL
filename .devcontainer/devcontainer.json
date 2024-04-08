@@ -1,0 +1,6 @@
+{
+    "name": "Python with Conda",
+    "dockerFile": "Dockerfile",
+    "extensions": ["dockerextensionpack"],
+}
+  
