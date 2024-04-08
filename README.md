@@ -82,3 +82,9 @@ docker-compose up -d
 ## Conclusion
 
 You have now successfully installed Conda, created a Conda environment from an `environment.yml` file, and installed Docker Compose on Ubuntu.
+
+## Start Jupiter
+1. Run the following command to start the Jupiter lab on Merger/test.ipynb:
+```bash
+cd Merger && jupyter lab
+```
