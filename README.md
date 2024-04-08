@@ -81,8 +81,4 @@ docker-compose up -d
 
 ## Conclusion
 
-<<<<<<< HEAD
 You have now successfully installed Conda, created a Conda environment from an `environment.yml` file, and installed Docker Compose on Ubuntu.
-=======
-You have now successfully installed Conda, created a Conda environment from an `environment.yml` file, and installed Docker Compose on Ubuntu.
->>>>>>> refs/remotes/origin/main
